@@ -1,0 +1,18 @@
+{
+   "manifest_version": 2,
+   "app": {
+      "launch": {
+         "local_path": "index.html"
+      }
+   },
+   "icons": {
+      "128": "icon@128.png",
+      "16": "icon@16.png",
+      "48": "icon@48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCJp/pa0tIogAbQpDrvdIUlXq/ahakI7PRrxzf581qr8NReARQHCAVi3L83Jc1j4OThqhoGENsTNBshfaityeBA0stGL1oZbeYd7GIB5n6vZWdP/FuzLvaZS2p5VxShDtepLcinYFnAE6k6DWJa3q1CZj3oq7mOzGKq5hzDnAD4yQIDAQAB",
+   "name": "NextDay Json Tool",
+   "offline_enabled": true,
+   "permissions": [ "tabs", "http://*.niting.com/*", "http://www.nxmix.com/", "http://www.niting.com/*", "contextMenus", "unlimitedStorage" ],
+   "version": "1.0.0"   
+}

@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>NiTing-Music Tool</title>
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/css.css" rel="stylesheet">
+<link href="css/jquery-ui-1.9.1.custom.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="container">
+  
+  <div>
+        <ul class="breadcrumb" id="nav-index">
+            <li><a href="#">设置日期和图片路径</a> <span class="divider">/</span></li>
+            <li class="active">生成json</li>
+        </ul>
+        <div class="progress progress-success progress-iven-bar">
+            <div id="progress-bar" style="width: 30%; " class="bar border-radius"></div>
+        </div>
+  </div>
+  
+  <!--设置日期和图片路径-->
+  <div id="step1" class="hero-unit" style="display:none;">
+
+    <form class="form-horizontal">
+        <fieldset>
+        
+          <div style="float:right">
+            <button id="next-btn" class="btn btn-primary" type="button"> Next </button>
+          </div>
+        
+          <div class="control-group">
+            <label for="datepicker" class="control-label">选择日期：</label>
+            <div class="controls">
+              <input type="text" id="datepicker" class="input-medium" />
+            </div>
+          </div>
+        
+          <div class="control-group">
+            <label for="event" class="control-label">特别的日子：</label>
+            <div class="controls">
+              <input type="text" id="event" class="input-medium" />
+            </div>
+          </div>
+          
+          <div class="control-group">
+            <label for="color_back" class="control-label">颜色：</label>
+            <div class="controls">
+              <input type="text" id="color_back" class="input-medium" />
+            </div>
+          </div>
+          
+          <div class="control-group">
+            <label for="comment1" class="control-label">主标题：</label>
+            <div class="controls">
+              <input type="text" id="comment1" class="input-xxlarge" />
+            </div>
+          </div>
+          
+          <div class="control-group">
+            <label for="comment2" class="control-label">副标题：</label>
+            <div class="controls">
+              <input type="text" id="comment2" class="input-xxlarge" />
+            </div>
+          </div>
+                    
+
+          <p>原有图片</p>
+          <hr></hr>
+                    
+          <div class="control-group">
+            <label for="pic" class="control-label">兼容图片：</label>
+            <div class="controls">
+              <input type="text" id="pic" class="input-xxlarge" />
+            </div>
+          </div>
+          
+          <div class="control-group">
+            <label for="squarepicurl" class="control-label">标准图片：</label>
+            <div class="controls">
+              <input type="text" id="squarepicurl" class="input-xxlarge" />
+            </div>
+          </div>
+          
+          <div class="control-group">
+            <label for="bigpicurl" class="control-label">点开的大图：</label>
+            <div class="controls">
+              <input type="text" id="bigpicurl" class="input-xxlarge" />
+            </div>
+          </div>
+          
+          <div class="control-group">
+            <label for="bigpicurl2x" class="control-label">点开的大图(Retina)：</label>
+            <div class="controls">
+              <input type="text" id="bigpicurl2x" class="input-xxlarge" />
+            </div>
+          </div>
+          
+          <p>iPhone5</p>
+          <hr></hr>
+
+          <div class="control-group">
+            <label for="iPhone5Standard" class="control-label">iPphone5标准图片(Retina)：</label>
+            <div class="controls">
+              <input type="text" id="iPhone5Standard" class="input-xxlarge" />
+            </div>
+          </div>
+
+          <div class="control-group">
+            <label for="iPhone5Big" class="control-label">iPphone5大图(Retina)：</label>
+            <div class="controls">
+              <input type="text" id="iPhone5Big" class="input-xxlarge" />
+            </div>
+          </div>
+
+          <p>歌曲相关</p>
+          <hr></hr>
+
+          <!--
+          <div class="control-group">
+            <label for="nitingimg2x" class="control-label">歌单图片：</label>
+            <div class="controls">
+              <input type="text" id="nitingimg2x" class="input-xxlarge" />
+            </div>
+          </div>
+          -->
+
+          <div class="control-group">
+            <label for="clientMusicURL" class="control-label">客户端单曲下载地址：</label>
+            <div class="controls">
+              <input type="text" id="clientMusicURL" class="input-xxlarge" />
+            </div>
+          </div>
+
+          <div class="control-group">
+            <label for="songName" class="control-label">歌曲名称：</label>
+            <div class="controls">
+              <input type="text" id="songName" class="input-xxlarge" />
+            </div>
+          </div>
+
+          <div class="control-group">
+            <label for="artist" class="control-label">作者：</label>
+            <div class="controls">
+              <input type="text" id="artist" class="input-xxlarge" />
+            </div>
+          </div>
+          
+          <div class="form-actions">
+            <button id="next-btn2" class="btn btn-primary" type="button"> Next </button>
+          </div>
+        </fieldset>
+      </form>
+    
+  </div>
+  
+  
+  <!--生成json-->
+  <div id="step2" class="hero-unit" style="display:none;">
+  	
+    <h2>生成的json数据</h2><br>
+
+    <pre id="jsonData"></pre>
+    <p>
+      <button id="copy-btn" class="btn btn-info"> Copy </button>
+    </p>
+    
+    <textarea id="copyText" style=" opacity:0;" ></textarea>
+    
+  </div>
+  
+  <footer>
+    <p>&copy; Nxmix.com 2012</p>
+  </footer>
+  
+</div>
+
+
+
+<script src="scripts/jquery-1.8.2.min.js"></script>
+<script src="scripts/bootstrap-button.js"></script>
+<script src="scripts/jquery-ui-1.9.1.custom.js"></script>
+<script src="scripts/niting.js"></script>
+</body>
+</html>

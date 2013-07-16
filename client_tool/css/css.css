@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{ padding:20px 0 0 0; overflow-y:scroll;}
+a:focus,.btn:focus { outline:none; -moz-outline:none;}
+body .input-height-max{ height:50px; font-size:32px; font-weight:bold; text-align:center;}
+
+.progress-iven-bar{margin: -45px 20px 0 0; width:200px; float:right; border: solid #FFF 1px;}
+.border-radius{border-radius: 3px;}
+
+footer{ font-size:11px;}
+
+#ui-datepicker-div{ -webkit-box-shadow:1px 3px 8px #999;-moz-box-shadow:1px 3px 8px #999;box-shadow:1px 3px 8px #999; }
+
+.unenable-color{ color:#999}
